@@ -18,11 +18,6 @@ func main() {
         log.Fatalf("failed to read font file: %v", err)
     }
 
-    // ttfFont, err := opentype.Parse(ttfBytes)
-    // if err != nil {
-    //     log.Fatalf("failed to parse font file: %v", err)
-    // }
-
     // Create PDF document
     pdf := gofpdf.New("P", "mm", "A4", "")
 

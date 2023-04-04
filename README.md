@@ -10,7 +10,7 @@ font-to-worksheet --font test.ttf --character a
 ```
 
 
-## Notes
+### Notes
 
 Built mainly with ChatGPT-3
 
