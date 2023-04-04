@@ -3,7 +3,7 @@
 Takes a TTF file and a character (alphabet/number) as input, and generates a PDF work sheet for handwriting practice with that font, for that character.
 
 
-### Notes
+## Notes
 
 Built almost entirely to test ChatGPT's capabilities, with some direct modifications to the final result to add clarity and fix some silly bugs. Here are the series of prompts that were used:
 
@@ -29,3 +29,6 @@ With the code above, the first row is not horizontally centered. And everything 
 ```
 
 At the end of all this, Chat-GPT was spitting out a table, with the characters being written out in a single column, outside of the page boundaries. I was impatient, and just fixed it myself.
+
+
+**Disclaimer:** The TTF Font (Gashington Classy) included in the repository does not belong to me.
