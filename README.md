@@ -3,22 +3,29 @@
 Takes a TTF file and a character (alphabet/number) as input, and generates a PDF work sheet for handwriting practice with that font, for that character.
 
 
-## Example Usage
-
-```
-font-to-worksheet --font test.ttf --character a
-```
-
-
 ### Notes
 
-Built mainly with ChatGPT-3
+Built almost entirely to test ChatGPT's capabilities, with some direct modifications to the final result to add clarity and fix some silly bugs. Here are the series of prompts that were used:
 
+```
+Write Golang Code to read a Truetype Font file and create a PDF handwriting worksheet for a given letter
 
-## TODO
+...
 
-- Use https://github.com/jung-kurt/gofpdf
-- Load in the TTF file, write the font in even spaces
-    - Find horizontal spacing by getting bounding box of character and dividing it by page width
-    - Bounding box can be found using https://pkg.go.dev/github.com/golang/freetype/truetype and/or https://pkg.go.dev/github.com/golang/freetype/truetype#Font
-- After row 1, next rows should have lower opacity (for practice)
+Modify that code to write the character in 12 rows of 10 columns, and every row except the first should have 0.5 opacity
+
+...
+
+The script above simply writes characters on multiple lines, instead of characters in tables. Please fix it.
+
+...
+
+Can you center the table on the page in the script above?
+
+...
+
+With the code above, the first row is not horizontally centered. And everything else is also not vertically centered.
+
+```
+
+At the end of all this, Chat-GPT was spitting out a table, with the characters being written out in a single column, outside of the page boundaries. I was impatient, and just fixed it myself.
